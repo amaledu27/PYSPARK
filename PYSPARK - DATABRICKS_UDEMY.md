@@ -36,9 +36,8 @@ In the initial stages, Data lake had two drawbacks, it laked Transactions - cons
 So, to solve this we started including data werehouses in data lakes but storing the processed data in data werehouses. This also eveolved over time.  
 
 The notion of the data lake recommends that you bring data into the lake in a raw format. That means you should ingest the data into the data lake and preserve an unmodified immutable copy of the data.The ingest block of the data lake is all about identifying, implementing, and managing the right tools to bring data from the source systems to the data lake. We do not have one ingestion tool that solves the purpose in all use cases. And hence, many vendors are competing for a place in this box.  
-Detailed view of data lake is below. 
-![image](https://github.com/user-attachments/assets/949ae019-7d19-4a6b-ae17-0cd8507b1a50)
-
+Detailed view of data lake is below.  
+<img width="710" height="407" alt="image" src="https://github.com/user-attachments/assets/7982c973-d1ba-465a-aa95-d2da5d56c929" />
 #### SPARK ecosystem 
 ![image](https://github.com/user-attachments/assets/b5b24a07-1798-4060-a5d3-008fed93fb83)   
 spark itself is not managing the storage and container part. Spark is managing the data processing workload. And that part is managed by the Spark Compute Engine. So the compute engine is responsible for a bunch of things. For example, breaking your data processing work into smaller tasks, scheduling those tasks on the cluster for parallel execution, providing data to these tasks, managing and monitoring those tasks, provide you fault tolerance when a job fails. And to do all these, the core engine is also responsible for interacting with the cluster manager and the data storage manager. So the Spark compute engine is the core that runs and manages your data processing work and provides you with a seamless experience. All you need to do is submit your data processing jobs to Spark, and the Spark core will take care of everything else.  
