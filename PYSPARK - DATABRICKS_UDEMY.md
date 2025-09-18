@@ -65,6 +65,39 @@ The next one is Spark Streaming libraries, and they allow you to process a conti
 Then you have a set of libraries specifically designed to meet your machine learning, deep learning, and AI requirements.   
 
 The last collection is for Graph Processing libraries and they allow you to implement Graph Processing Algorithms using Apache Spark.So the topmost layer is nothing but a set of libraries and DSLs to help you solve your data crunching problems.  
+
+#### SPECIAL START
+Apache spark – open source unified analytics engine for large scale data processing.
+
+Architecture
+Consist of driver process, set of executer processes and a cluster manager.
+ 
+<img width="733" height="676" alt="{93B43790-129C-4186-AEA0-5B8744BE86E8}" src="https://github.com/user-attachments/assets/1ca37eba-e218-4e70-a7d8-d9b5c0e4c573" />
+
+  
+Driver 
+Driver process runs the main function. Its sits on a node in the cluster and is responsible for maintaining information about spark application (acts like the brain and heart of the entire application), responding to a user’s program or input, and analyzing distributing and scheduling work across executors. Driver runs in a JVM and gives instructions 
+Executor is the run time environment. Each executor will have its own JVM.  The EXECUTORS will compete against each other for the resources available to the node. 
+Typically in a cluster, there will be multiple Nodes and each node will have a number of EXECUTORS in them (each executor will be on its own JVM).Or it can be just one executor per node (example – Databricks)
+Cluster is a collection of nodes, ie it consists of one DRIVER and multiple EXECUTORS
+The data to process as a whole is known as datasets, and this is then divided in to logical partition of data known as DATA PARTITION and will reside on each node.
+We can assign (or decide) the number of CORES (also known as SLOTS / THREADS) and MEMORY to an EXECUTOR and this will define how many TASKS can be run per EXECUTOR. And, this determines how many tasks can be run per executor. So, the total number of cores available in the executor will determine the PARALLELISM in spark (number of cores assigned to an executor will decide how many parallel tasks can run within one JVM
+In Spark, there will be many JOBS, which will have number of STAGES that will have number of TASKS. TASKS within a stage are doing the same operation on different set of data.
+JOBS tell you what is going to happen overall at a high level. Each job is divided in to different STAGES which is actually the operations that we want to do as part of the JOB – example – joins, group by etc. So one stage has one set of operations. Ie all the STAGES belonging to an operation will have same operation to be done on different data partitions.
+
+SPARK APIs
+RDD API– (resilient distributed collection of data) immutable distributed collection of data, do not infer schema
+Dataset API – Scala java
+Dataframe API – for python and R and scala – Also immutable collection of data, but has the capability of INFERING SCHEMA., Data is organized in to names columns.
+
+Both dataset and dataframe API s are much more memory efficient than RDD
+
+Steps involved in an actual query in dataframe gets translated
+
+ <img width="1125" height="244" alt="image" src="https://github.com/user-attachments/assets/f729b052-95e0-48de-b9c7-8ecd8ee7227c" />
+
+Fist it just makes a unresolved logical plan, then looks at the catalog (data columns etc) to make a logical plan
+#### SPECIAL END
 #### DataBricks
  It is built on top of pyspark, Databricks also offers you an integrated Hive meta-store to store metadata, allowing you to create Databases, Tables, and Views using Spark SQL. On top of this, Databricks also offers you an advanced SQL query engine called Photon, which allows you to gain data warehouse grade performance of your SQL queries and dashboards on top of the data lake infrastructure. Databricks Cloud offers seamless Delta Lake integration that offers ACID transactions and Data consistency features to your Application workload and Spark SQL. Databricks also offers ML Flow which allows us to manage the machine learning life cycle,including experimentation, deployment, model registry, etc
  #### Database VS Dataframe
