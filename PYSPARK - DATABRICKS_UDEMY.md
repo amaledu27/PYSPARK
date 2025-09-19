@@ -155,6 +155,17 @@ Note that we can do many df transformations, one after the other and be saved to
    <img width="263" height="33" alt="{088D5B54-3FAD-4A09-BC2B-0B93FC780828}" src="https://github.com/user-attachments/assets/2e522938-6248-42fe-9d7b-4222f82281b1" />
   <img width="730" height="159" alt="image" src="https://github.com/user-attachments/assets/5512cb55-6d0f-4941-b1fd-02e211f7b6fb" />
 
+  -df.cache()
+  You may use "df.cache()". to cache the df in memory to cache the df in memory specially to speed up if you are using the same df for mutiple calculations.
+  Even on puython worksheets{notebooks} you may use sql using the "spark.sql"to create the session. you need to convert it in to a view and the also apply enter the sql query in tripple quoutes as shown below.
+
+  <img width="544" height="384" alt="{2DEA7F35-B2D1-4250-8985-D48A5A676945}" src="https://github.com/user-attachments/assets/602053b7-4b45-44c0-8548-f54a6815ff1f" />
+  Similarly see the next question which is solved in dataframe, here also, we proceed by thinking the logic and then implementing it in pyspark.
+  <img width="1305" height="217" alt="image" src="https://github.com/user-attachments/assets/f023c06e-25a1-4aa6-88c5-c3c624128d99" />
+  In essence, DF analysisi is just a chain of df transformations. 
+In the example above, COUNT method is of type ACTION and the remaining 3 were of type transformation.
+Please note that the Action method was used in a sperate line as further transformations are not possibla after calling an action. This is a normal practice. 
+
 
 
 
