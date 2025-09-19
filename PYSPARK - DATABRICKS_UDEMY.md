@@ -145,9 +145,20 @@ Note that  transformations and functions will not trigger a spark job.
 <img width="1052" height="490" alt="image" src="https://github.com/user-attachments/assets/40c34dcf-7a8e-4065-b39f-99a9ed3be99d" />
 Please note that the 10 functions marked in red column are only available in python and not in any other languages, so its rarely used.
 <img width="939" height="518" alt="{077A924F-85E6-4621-AEA7-DA1AC07EE486}" src="https://github.com/user-attachments/assets/f0e38482-0b2b-4d6f-9646-49b4c782a0e4" />
-Spark df column names are case insensitive. ie  uppercase and lower case wil be the same. - We can use the withColumnRenamed() transformation to rename the column
+Spark df column names are case insensitive. ie  uppercase and lower case wil be the same.  
+- We can use the withColumnRenamed() transformation to rename the column
 <img width="1063" height="294" alt="{651E45CD-6E61-46D6-8C45-966C414223F5}" src="https://github.com/user-attachments/assets/2489bd75-6b1e-4a6a-9548-131c540c0776" />
-Note that we can do many df transformations, one after the other and be saved to the single df.
+Note that we can do many df transformations, one after the other and be saved to the single df. The SPARK dataFrame is immutable. The transformed one needs to be saved as a new dataframe.{Spark DataFrame transformation produces a newly transformed dataframe.}
+- You can see the data type information using the printSchema() utility method.
+<img width="352" height="189" alt="{B765A702-42C5-485E-9941-8B7F2D7FCF03}" src="https://github.com/user-attachments/assets/1645156c-f0e0-47e8-a44c-b09825023661" />
+- The withColumn() transformation converts only one column in the given dataframe.It takes two arguments: the column name and the conversion logic. we can use it to convert the data type  as follows.  
+   <img width="263" height="33" alt="{088D5B54-3FAD-4A09-BC2B-0B93FC780828}" src="https://github.com/user-attachments/assets/2e522938-6248-42fe-9d7b-4222f82281b1" />
+  <img width="730" height="159" alt="image" src="https://github.com/user-attachments/assets/5512cb55-6d0f-4941-b1fd-02e211f7b6fb" />
+
+
+
+
+
 
 
 
