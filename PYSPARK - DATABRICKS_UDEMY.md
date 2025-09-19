@@ -143,7 +143,7 @@ Spark is a distributed processing system. So it implements a driver/executor arc
 <img width="509" height="442" alt="{ECD269B4-32E8-4182-89C5-33CBC9C46926}" src="https://github.com/user-attachments/assets/ffdfcc79-5911-49e1-a647-7dfbd8f6f9a3" />
 Note that  transformations and functions will not trigger a spark job.
 <img width="1052" height="490" alt="image" src="https://github.com/user-attachments/assets/40c34dcf-7a8e-4065-b39f-99a9ed3be99d" />
-
+Please note that the 10 functions marked in red column are only available in python and not in any other languages, so its rarely used.
 <img width="939" height="518" alt="{077A924F-85E6-4621-AEA7-DA1AC07EE486}" src="https://github.com/user-attachments/assets/f0e38482-0b2b-4d6f-9646-49b4c782a0e4" />
 
 
