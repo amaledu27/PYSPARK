@@ -164,7 +164,11 @@ Note that we can do many df transformations, one after the other and be saved to
   <img width="1305" height="217" alt="image" src="https://github.com/user-attachments/assets/f023c06e-25a1-4aa6-88c5-c3c624128d99" />
   In essence, DF analysisi is just a chain of df transformations. 
 In the example above, COUNT method is of type ACTION and the remaining 3 were of type transformation.
-Please note that the Action method was used in a sperate line as further transformations are not possibla after calling an action. This is a normal practice. 
+Please note that the Action method was used in a sperate line as further transformations are not possibla after calling an action. This is a normal practice.
+Make sure to check select and expr transformations
+<img width="470" height="235" alt="{77E951BD-9546-48B4-B325-5A27BC368B30}" src="https://github.com/user-attachments/assets/a7448d1f-1323-42b5-87d7-4bdee964cf1b" />
+
+
 
 
 
