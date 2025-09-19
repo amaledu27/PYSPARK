@@ -123,9 +123,16 @@ You can use SQL on the table. However, Dataframe does not support SQL expression
 
 ![image](https://github.com/user-attachments/assets/82e6e046-084a-430b-8148-774a01d39cde)  
 
-The spark here is a Spark Session object. Spark session is your entry point for the Spark programming APIs. Every Spark program starts with the Spark Session because Spark APIs are available to you via the Spark Session object.
+The spark here is a Spark Session object. Spark session is your entry point for the Spark programming APIs. Every Spark program starts with the Spark Session because Spark APIs are available to you via the Spark Session object. Basically you get the dataframe reader from the "spark.read". Rest of the code set the configuration for the Dataframe reader and loads the data
  Also you cana create global temp tables views from the data frame and then run sql queries on the view  
- ![image](https://github.com/user-attachments/assets/ac0c797c-64de-402e-a760-59da4c3ac909)
+ ![image](https://github.com/user-attachments/assets/ac0c797c-64de-402e-a760-59da4c3ac909)   
+ The global_temp is a hidden database, and all global temporary tables are created in this global_temp database.
+ The dataframe reader offers 11 methods   
+ <img width="303" height="267" alt="{A4E9B45D-8446-417E-8A06-6332B6181BC4}" src="https://github.com/user-attachments/assets/dd6744e6-9cf8-4013-ad23-896dc54ce6f1" />  
+ The first 6 are for loading data from 6  different formats. It supports many other data types as well. Note that there are two types of methods. the shortcut one and the one shown above,most people are using this one commonly. 
+ - Link to the pyspark dataframe documentation
+https://spark.apache.org/docs/latest/api/python/reference/pyspark.sql/api/pyspark.sql.DataFrame.html
+We use df.show(n) to see first n rows in a df, but it will not look noice. you can use "display(df)". this command is not part of default pyspark command and is from databricks.
 
  
 
