@@ -124,7 +124,7 @@ You can use SQL on the table. However, Dataframe does not support SQL expression
 ![image](https://github.com/user-attachments/assets/82e6e046-084a-430b-8148-774a01d39cde)  
 
 The spark here is a Spark Session object. Spark session is your entry point for the Spark programming APIs. Every Spark program starts with the Spark Session because Spark APIs are available to you via the Spark Session object. Basically you get the dataframe reader from the "spark.read". Rest of the code set the configuration for the Dataframe reader and loads the data
- Also you cana create global temp tables views from the data frame and then run sql queries on the view  
+ <B>Also you cana create global temp tables views from the data frame and then run sql queries on the view  <B>
  ![image](https://github.com/user-attachments/assets/ac0c797c-64de-402e-a760-59da4c3ac909)   
  The global_temp is a hidden database, and all global temporary tables are created in this global_temp database.
  The dataframe reader offers 11 methods   
@@ -134,7 +134,19 @@ The spark here is a Spark Session object. Spark session is your entry point for 
 https://spark.apache.org/docs/latest/api/python/reference/pyspark.sql/api/pyspark.sql.DataFrame.html
 We use df.show(n) to see first n rows in a df, but it will not look noice. you can use "display(df)". this command is not part of default pyspark command and is from databricks.
 
- 
+#### Dataframe methods
+DF methods can be logically categorized in to 3 main groups  
+- Actions {actions triggers a spark job and return to the spark driver}
+- Transformations
+- functions / Methods
+Spark is a distributed processing system. So it implements a driver/executor architecture. So every Spark program runs as one driver and one or more executors.
+<img width="509" height="442" alt="{ECD269B4-32E8-4182-89C5-33CBC9C46926}" src="https://github.com/user-attachments/assets/ffdfcc79-5911-49e1-a647-7dfbd8f6f9a3" />
+Note that  transformations and functions will not trigger a spark job.
+<img width="1052" height="490" alt="image" src="https://github.com/user-attachments/assets/40c34dcf-7a8e-4065-b39f-99a9ed3be99d" />
+
+<img width="939" height="518" alt="{077A924F-85E6-4621-AEA7-DA1AC07EE486}" src="https://github.com/user-attachments/assets/f0e38482-0b2b-4d6f-9646-49b4c782a0e4" />
+
+
 
   
 
