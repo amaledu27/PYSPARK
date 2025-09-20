@@ -164,9 +164,18 @@ Note that we can do many df transformations, one after the other and be saved to
   <img width="1305" height="217" alt="image" src="https://github.com/user-attachments/assets/f023c06e-25a1-4aa6-88c5-c3c624128d99" />
   In essence, DF analysisi is just a chain of df transformations. 
 In the example above, COUNT method is of type ACTION and the remaining 3 were of type transformation.
-Please note that the Action method was used in a sperate line as further transformations are not possibla after calling an action. This is a normal practice.
+Please note that the Action method was used in a sperate line as further transformations are not possibla after calling an action. This is a normal practice.  
 Make sure to check select and expr transformations
 <img width="470" height="235" alt="{77E951BD-9546-48B4-B325-5A27BC368B30}" src="https://github.com/user-attachments/assets/a7448d1f-1323-42b5-87d7-4bdee964cf1b" />
+
+#### Spark execution methods
+1) interactive clients - ie command line spark shell and interactive notebooks, best suitable for exploartion / learning purposes.
+2) submit job - spark cmes with job submit utility  to allow you to submit your spark jobs to the cluster. this is the primary tool in the industry. (a real-life production implementation is all about packaging your Spark application and submitting it to the cluster for execution using sprk submit.)
+ However, most of the Spark vendors are going to offer you some other alternatives.
+
+For example,
+
+Databricks Cloud will allow you to submit the Notebook itself,and you do not need to package your application and use the spark-submit tool.Most of the cloud-based Spark vendors will also allow you to use Rest APIs or a web-based interface to submit your packaged Spark application. And they internally take care of running the job on the Spark cluster. All those methods are vendor-specific, but spark-submit is a universally accepted method and works in almost all cases.
 
 
 
