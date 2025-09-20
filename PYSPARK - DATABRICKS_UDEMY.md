@@ -175,7 +175,8 @@ Make sure to check select and expr transformations
 
 For example,
 
-Databricks Cloud will allow you to submit the Notebook itself,and you do not need to package your application and use the spark-submit tool.Most of the cloud-based Spark vendors will also allow you to use Rest APIs or a web-based interface to submit your packaged Spark application. And they internally take care of running the job on the Spark cluster. All those methods are vendor-specific, but spark-submit is a universally accepted method and works in almost all cases.
+Databricks Cloud will allow you to submit the Notebook itself,and you do not need to package your application and use the spark-submit tool.Most of the cloud-based Spark vendors will also allow you to use Rest APIs or a web-based interface to submit your packaged Spark application. And they internally take care of running the job on the Spark cluster. All those methods are vendor-specific, but spark-submit is a universally accepted method and works in almost all cases.  
+#### Spark distributed processing model - working
 
 
 
