@@ -195,6 +195,10 @@ In this mode,the Spark driver process runs locally at your client machine.Howeve
 However, if you are quitting your client or you log off from your client machine, then your driver dies,and hence the executors will also die in the absence of the driver.So, client mode is suitable for interactive work but not for long-running jobs.    
 The cluster mode is designed to submit your application to the cluster and let it run.
 In this mode,everything runs on the cluster.Your driver,as well as the executors.Once you submit your application to run in cluster mode,you can log off from the client machine,and your driver is not impacted because it is running on the cluster.So, the cluster mode is meant for submitting long-running jobs to the cluster.
+<UL>Summary of spark execution model <UL>  
+When you are going to run your Spark application,
+
+the first thing is to make a decision on which cluster manager you are going to use.There are many options,but in most of the cases, you will be working with two cluster managers.Local and YARNYou will be using Local when you are working in your IDE or in a Notebook on your local machine.And you will be using YARN when you are running your Spark application on a real cluster.You have two kinds of the cluster setup.The on-premise cluster which is mostly Cloudera distribution.On-Cloud cluster, which might be Databricks, Google Dataproc, or other similar offerings.Most of them are also using the YARN manager under the hood.Once you know your cluster manager, then you decide on the execution mode.You already learned that Spark supports two modes.Client Mode and the Cluster ModeYou will be using client mode on your local machine with the local cluster manager.Cluster mode doesn't make any sense here because you do not have a real cluster.You can also use the client mode on the YARN cluster when you are working in a YARN cluster but using a notebook or a spark-shell.Finally, you will be using the cluster mode when you are submitting your Spark application to run on a real cluster.So, we have the three most widely used execution models.
 
 
 
