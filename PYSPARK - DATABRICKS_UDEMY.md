@@ -178,7 +178,23 @@ For example,
 Databricks Cloud will allow you to submit the Notebook itself,and you do not need to package your application and use the spark-submit tool.Most of the cloud-based Spark vendors will also allow you to use Rest APIs or a web-based interface to submit your packaged Spark application. And they internally take care of running the job on the Spark cluster. All those methods are vendor-specific, but spark-submit is a universally accepted method and works in almost all cases.  
 #### Spark distributed processing model - working
 
+Spark applies a master-slave architecture to every application when we submit our application to the Spark.  
+When you submit an application a master process will be created. This master process is then going to create a bunch of slaves to distribute the work and complete your job. You can think of these as runtime containers with some dedicated CPU and memory. In Spark terminology, the master is a driver, and the slaves are the executors. {note that we are not talking about the cluster here.}So, the Spark engine is going to ask for a container from the underlying cluster manager to start the driver process. Once started, the driver is again going to ask for some more containers to start the executor process.And this happens for each application. Every spark application applies a master-slave architecture and runs independently on the cluster. And that is how Spark is a distributed computing platform.  
+How does SPARK RUN on a local machine.? - its uses the local cluster manager, and you can set the number of threads
+Spark engine is compatible with the following cluster managers.
+1) local[n]
+2) YARN
+3) Kubernetes
+4) Mesos
+5) standalone
+ <img width="993" height="246" alt="image" src="https://github.com/user-attachments/assets/5e1ddfbd-2d8d-4bd9-878d-bcfa17c315ad" />
+How does spark work with an interactive tool ?
+The Client mode is designed for interactive clients such as spark-shell and the notebooks
 
+In this mode,the Spark driver process runs locally at your client machine.However,the driver still connects to the cluster manager and starts all the executors on the cluster. And this is a powerful feature for submitting interactive queries and receiving results back to your client. And that is how your spark-shell and the Notebooks are working.
+However, if you are quitting your client or you log off from your client machine, then your driver dies,and hence the executors will also die in the absence of the driver.So, client mode is suitable for interactive work but not for long-running jobs.    
+The cluster mode is designed to submit your application to the cluster and let it run.
+In this mode,everything runs on the cluster.Your driver,as well as the executors.Once you submit your application to run in cluster mode,you can log off from the client machine,and your driver is not impacted because it is running on the cluster.So, the cluster mode is meant for submitting long-running jobs to the cluster.
 
 
 
