@@ -65,6 +65,11 @@ The next one is Spark Streaming libraries, and they allow you to process a conti
 Then you have a set of libraries specifically designed to meet your machine learning, deep learning, and AI requirements.   
 
 The last collection is for Graph Processing libraries and they allow you to implement Graph Processing Algorithms using Apache Spark.So the topmost layer is nothing but a set of libraries and DSLs to help you solve your data crunching problems.  
+### DEA
+<img width="740" height="720" alt="image" src="https://github.com/user-attachments/assets/b05fecbd-b24b-4499-8c40-428097323a58" />
+<img width="863" height="524" alt="image" src="https://github.com/user-attachments/assets/7f2c66a4-b984-436d-a87a-980db22b89cc" />  
+once the job is submitted, the "resource manager will create worker nodes and decides which one is master and which one is slave. master will decide the number of tasks.
+
 
 #### SPECIAL START
 Apache spark – open source unified analytics engine for large scale data processing.
