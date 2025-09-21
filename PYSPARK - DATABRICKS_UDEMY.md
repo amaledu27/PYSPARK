@@ -41,6 +41,7 @@ Detailed view of data lake is below.
 #### SPARK ecosystem 
 ![image](https://github.com/user-attachments/assets/b5b24a07-1798-4060-a5d3-008fed93fb83)   
 spark itself is not managing the storage and container part. Spark is managing the data processing workload. And that part is managed by the Spark Compute Engine. So the compute engine is responsible for a bunch of things. For example, breaking your data processing work into smaller tasks, scheduling those tasks on the cluster for parallel execution, providing data to these tasks, managing and monitoring those tasks, provide you fault tolerance when a job fails. And to do all these, the core engine is also responsible for interacting with the cluster manager and the data storage manager. So the Spark compute engine is the core that runs and manages your data processing work and provides you with a seamless experience. All you need to do is submit your data processing jobs to Spark, and the Spark core will take care of everything else.  
+spark physical execution engine is called TUNGSTEN execution engine.
 The second part of the Spark Core
 
 The Core APIs. - This layer is the programming interface layer that offers you the core APIs in four major languages.
@@ -78,6 +79,7 @@ Architecture
 Consist of driver process, set of executer processes and a cluster manager.
  
 <img width="733" height="676" alt="{93B43790-129C-4186-AEA0-5B8744BE86E8}" src="https://github.com/user-attachments/assets/1ca37eba-e218-4e70-a7d8-d9b5c0e4c573" />
+<img width="858" height="552" alt="image" src="https://github.com/user-attachments/assets/db07912b-ef7a-4c36-bb9a-a0f8f490ca62" />
 
   
 Driver 
