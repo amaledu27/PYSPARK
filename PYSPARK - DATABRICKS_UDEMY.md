@@ -207,6 +207,23 @@ When you are going to run your Spark application,
 
 the first thing is to make a decision on which cluster manager you are going to use.There are many options,but in most of the cases, you will be working with two cluster managers.Local and YARNYou will be using Local when you are working in your IDE or in a Notebook on your local machine.And you will be using YARN when you are running your Spark application on a real cluster.You have two kinds of the cluster setup.The on-premise cluster which is mostly Cloudera distribution.On-Cloud cluster, which might be Databricks, Google Dataproc, or other similar offerings.Most of them are also using the YARN manager under the hood.Once you know your cluster manager, then you decide on the execution mode.You already learned that Spark supports two modes.Client Mode and the Cluster ModeYou will be using client mode on your local machine with the local cluster manager.Cluster mode doesn't make any sense here because you do not have a real cluster.You can also use the client mode on the YARN cluster when you are working in a YARN cluster but using a notebook or a spark-shell.Finally, you will be using the cluster mode when you are submitting your Spark application to run on a real cluster.So, we have the three most widely used execution models.
 
+-----------------------------------------------
+-----------------------------------------------
+
+#### DEA DATABRICKS
+The follwing technologies are open source projects originally created by databricks employees::  
+- Delta Lake  and Delta sharing - this is the storage layer through which we can do ACID transactions on structured, semi structured and unstructered data
+- Mlflow - mlops CiCD pipeline.
+- Apache spark and structured streaming
+- Redash - dashboard
+- unity catalog -data governance engine and provides granular access and can run query
+Common used cases include - building an enterprise data lakehouse, ETL and data engineering, Machine learning, AI and DS, data warehousing, Analytics, BI, Data governance and secure data sharing, DevOps, CI/CD and task orchestration{we can also use github with databricks}, real time and streaming analytics. etc.
+Note that in databricks, you can  use code from github - as well, withe the Repos
+<img width="1482" height="338" alt="image" src="https://github.com/user-attachments/assets/d2d936e5-f105-41fb-9fc8-d16c2e7e85ac" />
+if you want to create your own  workspace, you may do it under "users"
+catalog will provide access to the data. Jobs and pipelines is what the name suggests. and from "Marketplace" you can use APIs from third party to stream data.
+Also "Genie" is an AI section to do EDA on the data. There is also a dedicated AI / ML section which has pretrained model, and feature to serve the model that youcreated by training your data.
+
 
 
 
