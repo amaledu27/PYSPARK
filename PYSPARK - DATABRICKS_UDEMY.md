@@ -224,6 +224,10 @@ if you want to create your own  workspace, you may do it under "users"
 catalog will provide access to the data. Jobs and pipelines is what the name suggests. and from "Marketplace" you can use APIs from third party to stream data.
 Also "Genie" is an AI section to do EDA on the data. There is also a dedicated AI / ML section which has pretrained model, and feature to serve the model that youcreated by training your data.
 
+RDD VS DF   
+Yo have to use RDD only if 1) you are supporting legacy  code in spark1 or when you have to tell spark exactly how to work with your data.  
+
+
 
 
 
