@@ -223,6 +223,11 @@ Note that in databricks, you can  use code from github - as well, withe the Repo
 if you want to create your own  workspace, you may do it under "users"
 catalog will provide access to the data. Jobs and pipelines is what the name suggests. and from "Marketplace" you can use APIs from third party to stream data.
 Also "Genie" is an AI section to do EDA on the data. There is also a dedicated AI / ML section which has pretrained model, and feature to serve the model that youcreated by training your data.
+While creating compute in DATABRICKS, we have the option for using "PHOTON ACCILERATION - databricks team rewrote spark core in c for better speed" but it comes with an extra cost.
+You also have the option to autoscale {by selecting  MIn and Max node counts, you can also select single node}
+you should also provide advanced SPARK configs and ENVIRONMENT variables under ADVANCED > SPARK
+<img width="1294" height="435" alt="image" src="https://github.com/user-attachments/assets/0b718275-8902-4221-a7aa-2b2b038882cb" />
+
 
 RDD VS DF   
 Yo have to use RDD only if 1) you are supporting legacy  code in spark1 or when you have to tell spark exactly how to work with your data.  
